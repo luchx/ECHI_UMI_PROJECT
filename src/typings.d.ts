@@ -1,6 +1,7 @@
 declare module 'slash2';
 declare module 'antd-pro-merge-less';
 declare module 'antd-theme-webpack-plugin';
+declare module 'webpack-theme-color-replacer';
 
 declare module '*.css';
 declare module '*.less';
