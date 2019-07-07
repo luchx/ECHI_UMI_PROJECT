@@ -1,4 +1,4 @@
-defaultSeverity: error
+defaultSeverity: warning
 extends:
   - tslint-react
   - tslint-eslint-rules
