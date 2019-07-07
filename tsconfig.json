@@ -20,5 +20,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "exclude": ["node_modules", "build", "tslint-config-prettier"]
+  "exclude": ["node_modules", "build"]
 }

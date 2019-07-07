@@ -7,14 +7,13 @@
     "start:no-mock": "cross-env MOCK=none umi dev",
     "build": "umi build",
     "test": "umi test",
-    "lint:es": "eslint --ext .js src mock tests",
-    "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
-    "lint:fix": "tslint --fix",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
     "lint:prettier": "check-prettier lint",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier -c --write **/*",
-    "pre-commit": "lint-staged",
-    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx"
+    "pre-commit": "lint-staged"
   },
   "husky": {
     "hooks": {
@@ -70,5 +69,12 @@
   },
   "engines": {
     "node": ">=8.0.0"
-  }
+  },
+  "checkFiles": [
+    "src/**/*.js*",
+    "src/**/*.ts*",
+    "src/**/*.less",
+    "config/**/*.js*",
+    "scripts/**/*.js"
+  ]
 }
