@@ -13,7 +13,7 @@ const config: IConfig = {
           hmr: true,
         },
         dynamicImport: {
-          // loadingComponent: './components/PageLoading/index',
+          loadingComponent: './components/PageLoading/index',
           webpackChunkName: true,
           level: 3,
         },
