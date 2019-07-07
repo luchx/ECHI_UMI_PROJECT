@@ -9,12 +9,13 @@
     "test": "umi test",
     "lint:es": "eslint --ext .js src mock tests",
     "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
-    "lint-staged": "lint-staged",
+    "lint:fix": "tslint --fix",
+    "pre-commit": "lint-staged",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint-staged"
+      "pre-commit": "npm run pre-commit"
     }
   },
   "lint-staged": {
