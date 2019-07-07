@@ -3,10 +3,7 @@
     "outDir": "build/dist",
     "module": "esnext",
     "target": "esnext",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "sourceMap": true,
     "baseUrl": ".",
     "jsx": "react",
@@ -20,13 +17,8 @@
     "experimentalDecorators": true,
     "strict": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "build",
-  ]
+  "exclude": ["node_modules", "build", "tslint-config-prettier"]
 }
