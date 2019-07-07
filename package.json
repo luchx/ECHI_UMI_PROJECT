@@ -10,6 +10,8 @@
     "lint:es": "eslint --ext .js src mock tests",
     "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint:fix": "tslint --fix",
+    "lint:prettier": "check-prettier lint",
+    "prettier": "prettier -c --write **/*",
     "pre-commit": "lint-staged",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx"
   },
@@ -21,7 +23,7 @@
   "lint-staged": {
     "**/*.less": "stylelint --syntax less",
     "**/*.{js,jsx,tsx,ts,less,md,json}": [
-      "prettier --write",
+      "npm run prettier",
       "git add"
     ],
     "**/*.{js,jsx}": "npm run lint-staged:js",
@@ -41,6 +43,7 @@
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
     "babel-eslint": "^9.0.0",
+    "check-prettier": "^1.0.3",
     "cross-env": "^5.2.0",
     "eslint": "^5.4.0",
     "eslint-config-umi": "^1.4.0",
