@@ -12,7 +12,6 @@
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
     "lint:prettier": "check-prettier lint",
-    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier -c --write **/*",
     "precommit": "lint-staged"
   },
@@ -22,13 +21,13 @@
     }
   },
   "lint-staged": {
-    "**/*.less": [
-      "stylelint --syntax less",
+    "**/*.{js,jsx,tsx,ts}": [
+      "eslint --ext .js,.jsx,.ts,.tsx --fix",
       "npm run prettier",
       "git add"
     ],
-    "**/*.{js,jsx,tsx,ts,less,md,json}": [
-      "npm run lint-staged:js",
+    "**/*.less": [
+      "stylelint --syntax less",
       "npm run prettier",
       "git add"
     ]
