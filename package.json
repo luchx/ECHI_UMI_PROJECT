@@ -12,7 +12,7 @@
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
     "lint:prettier": "check-prettier lint",
-    "prettier": "prettier -c --write **/*",
+    "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,less}'",
     "precommit": "lint-staged"
   },
   "husky": {
@@ -22,7 +22,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,tsx,ts}": [
-      "eslint --ext .js,.jsx,.ts,.tsx --fix",
+      "eslint --ext .js,.jsx,.ts,.tsx",
       "npm run prettier",
       "git add"
     ],
