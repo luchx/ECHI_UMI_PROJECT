@@ -3,6 +3,7 @@ import { resolve } from 'path';
 
 // ref: https://umijs.org/config/
 const config: IConfig = {
+  history: 'hash',
   ignoreMomentLocale: true,
   treeShaking: true,
   plugins: [
@@ -19,8 +20,8 @@ const config: IConfig = {
           webpackChunkName: true,
           level: 3,
         },
-        title: 'umi-app',
-        dll: true,
+        title: 'ECHI_UMI_PROJECT',
+        dll: false,
         locale: {
           enable: true,
           default: 'en-US',

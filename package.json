@@ -50,8 +50,6 @@
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "@types/react-test-renderer": "^16.0.3",
-    "@typescript-eslint/eslint-plugin": "^1.11.0",
-    "@typescript-eslint/parser": "^1.11.0",
     "@umijs/fabric": "^1.1.7",
     "babel-eslint": "^9.0.0",
     "check-prettier": "^1.0.3",
