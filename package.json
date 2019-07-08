@@ -21,8 +21,13 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,tsx,ts}": [
-      "eslint --ext .js,.jsx,.ts,.tsx",
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "npm run prettier",
+      "git add"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
       "npm run prettier",
       "git add"
     ],
