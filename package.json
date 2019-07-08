@@ -26,7 +26,11 @@
       "npm run prettier",
       "git add"
     ],
-    "**/*.less": "stylelint --syntax less --fix"
+    "**/*.less": [
+      "stylelint --syntax less",
+      "npm run prettier",
+      "git add"
+    ]
   },
   "dependencies": {
     "antd": "^3.19.5",
