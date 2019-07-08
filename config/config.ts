@@ -1,7 +1,9 @@
 import { IConfig } from 'umi-types';
+import { resolve } from 'path';
 
 // ref: https://umijs.org/config/
 const config: IConfig = {
+  ignoreMomentLocale: true,
   treeShaking: true,
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
@@ -35,6 +37,23 @@ const config: IConfig = {
       },
     ],
   ],
+  // Webpack Configuration
+  proxy: {
+    // '/api/v1/weather': {
+    //   target: 'https://api.seniverse.com/',
+    //   changeOrigin: true,
+    //   pathRewrite: { '^/api/v1/weather': '/v3/weather' },
+    // },
+  },
+  alias: {
+    api: resolve(__dirname, './src/services/'),
+    components: resolve(__dirname, './src/components'),
+    config: resolve(__dirname, './src/utils/config'),
+    models: resolve(__dirname, './src/models'),
+    services: resolve(__dirname, './src/services'),
+    themes: resolve(__dirname, './src/themes'),
+    utils: resolve(__dirname, './src/utils'),
+  },
 };
 
 export default config;
