@@ -2,8 +2,25 @@
 
 > 本项目是基于umi搭建的，`umi`版本为`2.7.0`，项目创建请参考[官网教程](https://umijs.org/zh/guide/getting-started.html)，选择自己需要的插件进行安装，这里不再赘述；
 
-## 参考umi的目录结构
+## 命令行
+
+```bash
+    "analyze": "cross-env ANALYZE=1 umi build",
+    "start": "umi dev",
+    "start:no-mock": "cross-env MOCK=none umi dev",
+    "build": "umi build",
+    "test": "umi test",
+    "lint:fix": "npm run lint:js && npm run lint:style && npm run prettier",
+    "lint:js": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+    "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
+    "lint:prettier": "check-prettier lint",
+    "prettier": "prettier --write 'src/**/*.{js,jsx,ts,tsx,less}'",
+    "precommit": "lint-staged"
 ```
+
+## 参考umi的目录结构
+
+```js
 .
 ├── dist/                          // 默认的 build 输出目录
 ├── mock/                          // mock 文件所在目录，基于 express
