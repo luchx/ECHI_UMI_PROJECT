@@ -1,7 +1,5 @@
 # 开发须知
 
-## 注意事项
-
 > 本项目是基于umi搭建的，`umi`版本为`2.7.0`，项目创建请参考[官网教程](https://umijs.org/zh/guide/getting-started.html)，选择自己需要的插件进行安装，这里不再赘述；
 
 ## 命令行
